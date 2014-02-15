@@ -1,0 +1,56 @@
+java -jar <ovinstalldir>/java/jcodautil.jar –ping –n <hostname.domain>
+java -jar <ovinstalldir>/java/jcodautil.jar –obj –n <hostname.domain>
+
+NOTE: If java is not in the path on the BSM system, you can use the java runtime under <TOPAZ_HOME>/jre/bin.
+The first command above does a connectivity check with the collection agent on the target system <hostname.domain>
+The second command retrieves objects for which data collection has happened on the target system <hostname.domain>
+
+sh-3.2#  /opt/HP/BSM/SDR/JRE/jre/bin/java -jar jcodautil.jar -help
+Usage: java jcodautil  [options]
+
+-status      :  Get collector status
+-support     :  Test collector
+-obj         :  Display object model
+-objTree     :  Display the classes and subclasses as a tree
+-dumpds      :  Dump last record
+-ping        :  Ping the OvBbcCb and Coda
+-https       :  Option to use https
+-testBBCConfig   :      Option to test configuration update
+-n           :  Hostname of the system
+-?           :  Display help for jcodautil
+-version     :  Display the version of this jcodautil
+-rt          :  Set the provider to Realtime
+-ls          :  List current subscriptions on the server
+-verbose     :  Enable verbose mode
+-help        :  Get Metric Help
+
+
+sh-3.2#  /opt/HP/BSM/SDR/JRE/jre/bin/java -jar   OvBbc.jar   -help
+
+Usage: com.hp.ov.bbc.Version -h|-help
+       com.hp.ov.bbc.Version -component
+       com.hp.ov.bbc.Version -file
+       com.hp.ov.bbc.Version -version
+       com.hp.ov.bbc.Version -compiler
+       com.hp.ov.bbc.Version -company
+       com.hp.ov.bbc.Version -copyright
+       com.hp.ov.bbc.Version -cbid
+       com.hp.ov.bbc.Version -description
+       com.hp.ov.bbc.Version -patchid
+       com.hp.ov.bbc.Version -rtype
+
+
+
+sh-3.2#  /opt/HP/BSM/SDR/JRE/jre/bin/java -jar   OvBbcSsl.jar -help
+
+Usage: com.hp.ov.bbc.ssl.Version -h|-help
+       com.hp.ov.bbc.ssl.Version -component
+       com.hp.ov.bbc.ssl.Version -file
+       com.hp.ov.bbc.ssl.Version -version
+       com.hp.ov.bbc.ssl.Version -compiler
+       com.hp.ov.bbc.ssl.Version -company
+       com.hp.ov.bbc.ssl.Version -copyright
+       com.hp.ov.bbc.ssl.Version -cbid
+       com.hp.ov.bbc.ssl.Version -description
+       com.hp.ov.bbc.ssl.Version -patchid
+       com.hp.ov.bbc.ssl.Version -rtype
